@@ -8,7 +8,7 @@ function lowerCaseWords(mixedArray) {
 
       
         const filtered = mixedArray.filter(item => typeof item === "string")
-                                   .map(str => str.toLowerCase());
+            .map(str => str.toLowerCase());
 
         if (filtered.length > 0) {
             resolve(filtered);
@@ -19,9 +19,7 @@ function lowerCaseWords(mixedArray) {
 }
 
 
-const mixedArray = ["PIZZA", 10, true, "JavaScript", "HELLO", 34];
+const mixedArray = ["PIZZA", 10, true, 25, false, 'Wings'];
 lowerCaseWords(mixedArray)
     .then(result => console.log("Result:", result))
     .catch(error => console.error(error));
-
-module.exports = lowerCaseWords;
